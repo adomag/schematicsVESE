@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 2
+Sheet 1 3
 Title "PowerWheelz"
 Date "2020-10-13"
 Rev "1"
@@ -14,9 +14,15 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Sheet
-S 950  1000 3500 1500
+S 1000 1250 2500 1000
 U 5F8680B4
-F0 "Battery Layout" 50
-F1 "batteryLayout.sch" 50
+F0 "Battery Layout 1 (5S5P)" 50
+F1 "batteryLayout5S5P.sch" 50
+$EndSheet
+$Sheet
+S 1000 2750 2500 1000
+U 5FA8CE26
+F0 "BatteryLayout 2 (10S5P)" 50
+F1 "BatteryLayout10S5P.sch" 50
 $EndSheet
 $EndSCHEMATC
