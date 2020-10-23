@@ -9,7 +9,7 @@ Date "2020-10-13"
 Rev "1"
 Comp "VESE"
 Comment1 "Alex Domagala"
-Comment2 ""
+Comment2 "Jonathan Perthel"
 Comment3 ""
 Comment4 ""
 $EndDescr
