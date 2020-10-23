@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name PowerWheelzSchematics-rescue)(type Legacy)(uri ${KIPRJMOD}/PowerWheelzSchematics-rescue.lib)(options "")(descr ""))
+)
