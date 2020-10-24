@@ -513,9 +513,11 @@ F 3 "" H 7400 1975 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L VESE:BMS U?
+L PowerWheelzSchematics-rescue:BMS-VESE U?
 U 1 1 5F954BBE
 P 6750 1275
+AR Path="/5F954BBE" Ref="U?"  Part="1" 
+AR Path="/5F8680B4/5F954BBE" Ref="U?"  Part="1" 
 F 0 "U?" H 6825 1200 50  0001 C CNN
 F 1 "BMS" H 7178 1358 50  0000 C CNN
 F 2 "" H 6825 1200 50  0001 C CNN
@@ -560,7 +562,7 @@ Connection ~ 7425 2500
 Wire Wire Line
 	7425 2500 7500 2500
 Wire Wire Line
-	7500 4450 9250 4450
+	7500 4450 8400 4450
 Connection ~ 7500 4450
 NoConn ~ 9250 4450
 Wire Wire Line
@@ -572,4 +574,70 @@ Wire Wire Line
 Wire Wire Line
 	2750 4625 2750 4450
 Connection ~ 2750 4450
+$Comp
+L PowerWheelzSchematics-rescue:Load U?
+U 1 1 5F952371
+P 8200 3950
+F 0 "U?" H 8300 3900 50  0001 C CNN
+F 1 "Load" H 8628 3850 39  0000 L CNN
+F 2 "" H 8300 3900 50  0001 C CNN
+F 3 "" H 8300 3900 50  0001 C CNN
+	1    8200 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 1450 7600 1425
+Connection ~ 7600 1425
+Wire Wire Line
+	7600 1425 7600 1400
+$Comp
+L PowerWheelzSchematics-rescue:Supply U?
+U 1 1 5F962F29
+P 9000 3950
+F 0 "U?" H 9150 3900 50  0001 C CNN
+F 1 "Supply" H 9328 3875 50  0000 L CNN
+F 2 "" H 9150 3900 50  0001 C CNN
+F 3 "" H 9150 3900 50  0001 C CNN
+	1    9000 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 4200 9150 4450
+Connection ~ 9150 4450
+Wire Wire Line
+	9150 4450 9250 4450
+Wire Wire Line
+	8400 4250 8400 4450
+Connection ~ 8400 4450
+Wire Wire Line
+	8400 4450 9150 4450
+Wire Wire Line
+	8400 3850 8400 1400
+Wire Wire Line
+	8400 1400 7600 1400
+Wire Wire Line
+	9150 3850 9150 1300
+Wire Wire Line
+	9150 1300 7600 1300
+Wire Wire Line
+	7600 1300 7600 1325
+Connection ~ 7600 1325
+Wire Wire Line
+	7600 1325 7600 1350
+Text Notes 2950 1850 0    50   ~ 0
+This is the Balanced Inputs which connects to the positive terminal to each battery in series
+Text Notes 7850 4650 0    50   ~ 0
+This is + wire conneceting to Load and supply\n
+Text Notes 7600 950  0    50   ~ 0
+The C- wire connects to the negative terminal for the Charge (supply)
+Text Notes 7600 1050 0    50   ~ 0
+The P- wire connects to the negative terminal of the load\n
+Text Notes 7600 1150 0    50   ~ 0
+The B- Terminal is the net negative terminal for the entire battery
+Text Notes 9200 3450 0    50   ~ 0
+The load represents the connection to motor
+Text Notes 9200 3600 0    50   ~ 0
+The Supply represents a connection to Power Supply\n
+Text Notes 2950 2000 0    50   ~ 0
+The GND pin connects to the negative terminal of the first battery in series\n
 $EndSCHEMATC

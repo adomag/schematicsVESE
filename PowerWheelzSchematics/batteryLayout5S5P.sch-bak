@@ -137,8 +137,6 @@ Wire Wire Line
 Wire Wire Line
 	3700 4450 3950 4450
 Wire Wire Line
-	3700 2500 3700 3000
-Wire Wire Line
 	3950 2500 3700 2500
 Wire Wire Line
 	4400 3950 4650 3950
@@ -448,7 +446,7 @@ Wire Wire Line
 Wire Wire Line
 	7500 4450 7250 4450
 Wire Wire Line
-	7250 2500 7500 2500
+	7250 2500 7425 2500
 $Comp
 L PowerWheelzSchematics-rescue:18650-VESE U?
 U 1 1 5F881C08
@@ -514,20 +512,126 @@ F 3 "" H 7400 1975 50  0001 C CNN
 	1    7250 2425
 	0    1    1    0   
 $EndComp
+$Comp
+L PowerWheelzSchematics-rescue:BMS-VESE U?
+U 1 1 5F954BBE
+P 6750 1275
+AR Path="/5F954BBE" Ref="U?"  Part="1" 
+AR Path="/5F8680B4/5F954BBE" Ref="U?"  Part="1" 
+F 0 "U?" H 6825 1200 50  0001 C CNN
+F 1 "BMS" H 7178 1358 50  0000 C CNN
+F 2 "" H 6825 1200 50  0001 C CNN
+F 3 "" H 6825 1200 50  0001 C CNN
+	1    6750 1275
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	7500 4450 7500 4750
+	6800 2125 2750 2125
 Wire Wire Line
-	7500 4750 5250 4750
+	2750 2125 2750 2500
+Connection ~ 2750 2500
 Wire Wire Line
-	5250 4750 5250 5000
+	6925 2175 3700 2175
+Wire Wire Line
+	3700 2175 3700 2500
+Wire Wire Line
+	6925 2125 6925 2175
+Wire Wire Line
+	7050 2125 7050 2225
+Wire Wire Line
+	7050 2225 4650 2225
+Wire Wire Line
+	4650 2225 4650 2500
+Wire Wire Line
+	3700 2500 3700 3000
+Wire Wire Line
+	7175 2125 7175 2275
+Wire Wire Line
+	7175 2275 5600 2275
+Wire Wire Line
+	5600 2275 5600 2500
+Wire Wire Line
+	7300 2125 7300 2325
+Wire Wire Line
+	7300 2325 6550 2325
+Wire Wire Line
+	6550 2325 6550 2500
+Wire Wire Line
+	7425 2125 7425 2500
+Connection ~ 7425 2500
+Wire Wire Line
+	7425 2500 7500 2500
+Wire Wire Line
+	7500 4450 8400 4450
 Connection ~ 7500 4450
+NoConn ~ 9250 4450
 Wire Wire Line
-	2750 4450 2750 4750
+	7600 1525 7750 1525
 Wire Wire Line
-	2750 4750 5000 4750
+	7750 1525 7750 4625
 Wire Wire Line
-	5000 4750 5000 5000
+	7750 4625 2750 4625
+Wire Wire Line
+	2750 4625 2750 4450
 Connection ~ 2750 4450
-NoConn ~ 5000 5000
-NoConn ~ 5250 5000
+$Comp
+L PowerWheelzSchematics-rescue:Load U?
+U 1 1 5F952371
+P 8200 3950
+F 0 "U?" H 8300 3900 50  0001 C CNN
+F 1 "Load" H 8628 3850 39  0000 L CNN
+F 2 "" H 8300 3900 50  0001 C CNN
+F 3 "" H 8300 3900 50  0001 C CNN
+	1    8200 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 1450 7600 1425
+Connection ~ 7600 1425
+Wire Wire Line
+	7600 1425 7600 1400
+$Comp
+L PowerWheelzSchematics-rescue:Supply U?
+U 1 1 5F962F29
+P 9000 3950
+F 0 "U?" H 9150 3900 50  0001 C CNN
+F 1 "Supply" H 9328 3875 50  0000 L CNN
+F 2 "" H 9150 3900 50  0001 C CNN
+F 3 "" H 9150 3900 50  0001 C CNN
+	1    9000 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 4200 9150 4450
+Connection ~ 9150 4450
+Wire Wire Line
+	9150 4450 9250 4450
+Wire Wire Line
+	8400 4250 8400 4450
+Connection ~ 8400 4450
+Wire Wire Line
+	8400 4450 9150 4450
+Wire Wire Line
+	8400 3850 8400 1400
+Wire Wire Line
+	8400 1400 7600 1400
+Wire Wire Line
+	9150 3850 9150 1300
+Wire Wire Line
+	9150 1300 7600 1300
+Wire Wire Line
+	7600 1300 7600 1325
+Connection ~ 7600 1325
+Wire Wire Line
+	7600 1325 7600 1350
+Text Notes 4150 2000 0    50   ~ 0
+This is the Balanced Inputs for each battery in series
+Text Notes 7850 4650 0    50   ~ 0
+This is + wire conneceting to Load and supply\n
+Text Notes 7600 950  0    50   ~ 0
+The C- wire connects to the negative terminal for the Charge (supply)
+Text Notes 7600 1050 0    50   ~ 0
+The P- wire connects to the negative terminal of the load\n
+Text Notes 7600 1150 0    50   ~ 0
+The B- Terminal is the net negative terminal for the entire battery
 $EndSCHEMATC
