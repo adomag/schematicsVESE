@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 3
+Sheet 3 3
 Title "Battery Layout"
 Date "2020-10-13"
 Rev "1"
@@ -554,7 +554,6 @@ Wire Wire Line
 	6550 2975 5800 2975
 Wire Wire Line
 	5800 2975 5800 3150
-NoConn ~ 8350 5100
 Wire Wire Line
 	6850 2175 7000 2175
 Wire Wire Line
@@ -591,21 +590,21 @@ Wire Wire Line
 Wire Wire Line
 	7400 4500 7400 2075
 Text Notes 2200 2500 0    50   ~ 0
-This is the Balanced Inputs which connects to the positive terminal to each battery in series
+Balance Inputs: connect to the positive terminals of each battery in series
 Text Notes 7075 5250 0    50   ~ 0
-This is + wire conneceting to Load and supply\n
++V wire conneceting to Load and Supply\n
 Text Notes 6850 1600 0    50   ~ 0
-The C- wire connects to the negative terminal for the Charge (supply)
+C- connects to the negative terminal for the Charge
 Text Notes 6850 1700 0    50   ~ 0
-The P- wire connects to the negative terminal of the load\n
+P- wire connects to the negative terminal for the Load\n
 Text Notes 6850 1800 0    50   ~ 0
-The B- Terminal is the net negative terminal for the entire battery
+B- terminal is the net negative terminal for the entire battery
 Text Notes 8550 4675 0    50   ~ 0
-The load represents the connection to motor
+The Load represents the connection to Motor
 Text Notes 8550 4825 0    50   ~ 0
-The Supply represents a connection to Power Supply\n
+The Supply represents a connection to Charger\n
 Text Notes 2200 2650 0    50   ~ 0
-The GND pin connects to the negative terminal of the first battery in series\n
+GND: connects to the negative terminal of the first battery in series\n
 Wire Wire Line
 	6500 3150 6750 3150
 Wire Wire Line
@@ -629,7 +628,18 @@ Connection ~ 6750 5100
 Wire Wire Line
 	7400 5100 8000 5100
 Connection ~ 7400 5100
-Wire Wire Line
-	8000 5100 8350 5100
-Connection ~ 8000 5100
+Text Notes 7325 4725 0    39   ~ 0
+XT90
+Text Notes 2075 5175 0    50   ~ 0
+0V
+Text Notes 2875 5200 0    50   ~ 0
+3.6V
+Text Notes 3825 5200 0    50   ~ 0
+7.2V
+Text Notes 4750 5200 0    50   ~ 0
+10.8V
+Text Notes 5725 5200 0    50   ~ 0
+14.4V
+Text Notes 6650 5200 0    50   ~ 0
+18.0V
 $EndSCHEMATC

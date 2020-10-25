@@ -14,15 +14,239 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Sheet
-S 1000 1250 2500 1000
-U 5F8680B4
-F0 "Battery Layout 1 (5S5P)" 50
-F1 "batteryLayout5S5P.sch" 50
-$EndSheet
-$Sheet
-S 1000 2750 2500 1000
+S 5425 3950 1750 500 
 U 5FA8CE26
 F0 "BatteryLayout 2 (10S5P)" 50
 F1 "BatteryLayout10S5P.sch" 50
 $EndSheet
+Wire Wire Line
+	2600 5000 2550 5000
+Wire Wire Line
+	2650 5000 2750 5000
+$Comp
+L VESE:Motor U?
+U 1 1 5F97A74D
+P 2550 2950
+F 0 "U?" H 2550 2950 50  0001 C CNN
+F 1 "Motor" H 3061 2684 50  0000 L CNN
+F 2 "" H 2550 2950 50  0001 C CNN
+F 3 "" H 2550 2950 50  0001 C CNN
+	1    2550 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L VESE:Battery(5S5P) U?
+U 1 1 5F985BDF
+P 9275 3000
+F 0 "U?" H 9275 3000 50  0001 C CNN
+F 1 "Battery(5S5P)" V 9525 3028 50  0000 L CNN
+F 2 "" H 9275 3000 50  0001 C CNN
+F 3 "" H 9275 3000 50  0001 C CNN
+	1    9275 3000
+	0    1    1    0   
+$EndComp
+$Comp
+L VESE:Battery(5S5P) U?
+U 1 1 5F987B8F
+P 9275 3500
+F 0 "U?" H 9275 3500 50  0001 C CNN
+F 1 "Battery(5S5P)" V 9525 3528 50  0000 L CNN
+F 2 "" H 9275 3500 50  0001 C CNN
+F 3 "" H 9275 3500 50  0001 C CNN
+	1    9275 3500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4850 5850 4850 6200
+Wire Wire Line
+	3150 5850 2950 5850
+Wire Wire Line
+	3150 6350 3150 5850
+$Comp
+L VESE:VESC U?
+U 1 1 5F96E5B6
+P 2350 5100
+F 0 "U?" H 2350 5100 50  0001 C CNN
+F 1 "VESC" H 2322 4658 50  0000 R CNN
+F 2 "" H 2350 5100 50  0001 C CNN
+F 3 "" H 2350 5100 50  0001 C CNN
+	1    2350 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_DIP_x01 SW?
+U 1 1 5F9C224C
+P 4025 5700
+F 0 "SW?" H 4025 5967 50  0001 C CNN
+F 1 "Emergency Stop Switch" H 4025 5875 50  0000 C CNN
+F 2 "" H 4025 5700 50  0001 C CNN
+F 3 "~" H 4025 5700 50  0001 C CNN
+	1    4025 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 6350 3875 6350
+Wire Wire Line
+	2950 5700 3725 5700
+Wire Wire Line
+	4325 5700 4850 5700
+Text Notes 1450 1100 0    315  ~ 0
+VESE PowerWheelz Electrical Layouts\n
+Text Notes 5375 3000 0    157  ~ 0
+Battery Layouts
+$Sheet
+S 5425 3200 1750 500 
+U 5F8680B4
+F0 "Battery Layout 1 (5S5P)" 50
+F1 "batteryLayout5S5P.sch" 50
+$EndSheet
+Wire Wire Line
+	2450 4550 2450 5000
+Wire Wire Line
+	2550 4550 2550 5000
+Wire Wire Line
+	2650 4550 2650 5000
+$Comp
+L Device:Fuse F
+U 1 1 5F9D666D
+P 4025 6350
+F 0 "F" V 3828 6350 50  0001 C CNN
+F 1 "40A Fuse" V 3920 6350 50  0000 C CNN
+F 2 "" V 3955 6350 50  0001 C CNN
+F 3 "~" H 4025 6350 50  0001 C CNN
+	1    4025 6350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4175 6350 4850 6350
+$Comp
+L VESE:Battery(5S5P) U?
+U 1 1 5F9E11C0
+P 9275 2000
+F 0 "U?" H 9275 2000 50  0001 C CNN
+F 1 "Battery(5S5P)" V 9525 2028 50  0000 L CNN
+F 2 "" H 9275 2000 50  0001 C CNN
+F 3 "" H 9275 2000 50  0001 C CNN
+	1    9275 2000
+	0    1    1    0   
+$EndComp
+$Comp
+L VESE:Battery(5S5P) U?
+U 1 1 5F9E11C6
+P 9275 2500
+F 0 "U?" H 9275 2500 50  0001 C CNN
+F 1 "Battery(5S5P)" V 9525 2528 50  0000 L CNN
+F 2 "" H 9275 2500 50  0001 C CNN
+F 3 "" H 9275 2500 50  0001 C CNN
+	1    9275 2500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8525 2675 8525 2175
+Wire Wire Line
+	8525 2175 8675 2175
+Wire Wire Line
+	8525 2675 8675 2675
+Wire Wire Line
+	8675 2325 8625 2325
+Wire Wire Line
+	8625 2325 8625 2825
+Wire Wire Line
+	8625 2825 8675 2825
+Wire Wire Line
+	8525 3175 8525 3675
+Wire Wire Line
+	8525 3675 8675 3675
+Wire Wire Line
+	8675 3325 8625 3325
+Wire Wire Line
+	8625 3325 8625 3825
+Wire Wire Line
+	8625 3825 8675 3825
+Wire Wire Line
+	8625 3825 8275 3825
+Connection ~ 8625 3825
+Wire Wire Line
+	8525 2175 8275 2175
+Connection ~ 8525 2175
+Wire Wire Line
+	8625 2825 8625 3175
+Wire Wire Line
+	8525 3175 8625 3175
+Connection ~ 8625 2825
+Connection ~ 8625 3175
+Wire Wire Line
+	8625 3175 8675 3175
+$Comp
+L VESE:Battery(5S5P) U?
+U 1 1 5F9F8610
+P 5450 5525
+F 0 "U?" H 5450 5525 50  0001 C CNN
+F 1 "Battery(5S5P)" V 5700 5553 50  0000 L CNN
+F 2 "" H 5450 5525 50  0001 C CNN
+F 3 "" H 5450 5525 50  0001 C CNN
+	1    5450 5525
+	0    1    1    0   
+$EndComp
+$Comp
+L VESE:Battery(5S5P) U?
+U 1 1 5F9F8616
+P 5450 6025
+F 0 "U?" H 5450 6025 50  0001 C CNN
+F 1 "Battery(5S5P)" V 5700 6053 50  0000 L CNN
+F 2 "" H 5450 6025 50  0001 C CNN
+F 3 "" H 5450 6025 50  0001 C CNN
+	1    5450 6025
+	0    1    1    0   
+$EndComp
+NoConn ~ 8275 3825
+NoConn ~ 8275 2175
+Text Notes 4775 5450 0    79   ~ 0
+10S5P (50 Cells)
+Text Notes 8625 1900 0    79   ~ 0
+10S10P (100 Cells)
+$Comp
+L VESE:Battery(5S5P) U?
+U 1 1 5FA0FAAC
+P 9300 4425
+F 0 "U?" H 9300 4425 50  0001 C CNN
+F 1 "Battery(5S5P)" V 9550 4453 50  0000 L CNN
+F 2 "" H 9300 4425 50  0001 C CNN
+F 3 "" H 9300 4425 50  0001 C CNN
+	1    9300 4425
+	0    1    1    0   
+$EndComp
+$Comp
+L VESE:Battery(5S5P) U?
+U 1 1 5FA0FAB2
+P 9300 4925
+F 0 "U?" H 9300 4925 50  0001 C CNN
+F 1 "Battery(5S5P)" V 9550 4953 50  0000 L CNN
+F 2 "" H 9300 4925 50  0001 C CNN
+F 3 "" H 9300 4925 50  0001 C CNN
+	1    9300 4925
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8700 5100 8550 5100
+Wire Wire Line
+	8550 5100 8550 4600
+Wire Wire Line
+	8550 4600 8700 4600
+Wire Wire Line
+	8700 4750 8650 4750
+Wire Wire Line
+	8650 4750 8650 5250
+Wire Wire Line
+	8650 5250 8700 5250
+Wire Wire Line
+	8550 4600 8300 4600
+Connection ~ 8550 4600
+Wire Wire Line
+	8650 5250 8300 5250
+Connection ~ 8650 5250
+NoConn ~ 8300 4600
+NoConn ~ 8300 5250
+Text Notes 8600 4325 0    79   ~ 0
+5S10P (50 Cells)
 $EndSCHEMATC
